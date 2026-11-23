@@ -43,31 +43,32 @@ When running the interactive UI alongside manual API checks, **two terminal tabs
 
 **Start the Unified React + C# Console:**
 ```powershell
-cd compliance-ui; npm install; npm run build; cd ..
-New-Item -ItemType Directory -Force -Path "ComplianceApi\wwwroot" | Out-Null
-Copy-Item -Path "compliance-ui\dist\*" -Destination "ComplianceApi\wwwroot" -Recurse -Force
-dotnet run --project ComplianceApi --urls "http://localhost:5000"
+npm install; npm run build
+New-Item -ItemType Directory -Force -Path "wwwroot" | Out-Null
+Copy-Item -Path "dist\*" -Destination "wwwroot" -Recurse -Force
+dotnet run --project kernal_compliance.csproj --urls "http://localhost:5000"
 ```
 
 **Run Automated Tests in One Terminal:**
 ```powershell
-$s = Start-Job { dotnet run --project "$PWD\ComplianceApi" --urls "http://localhost:5000" }; Start-Sleep 4; dotnet test; Stop-Job $s; Remove-Job $s
+
+$s = Start-Job { dotnet run --project "$PWD\kernal_compliance.csproj" --urls "http://localhost:5000" }; Start-Sleep 4; dotnet test complianceApi.Tests.csproj; Stop-Job $s; Remove-Job $s
 ```
 
 ### macOS / Linux (Bash or Zsh)
 
 **Start the Unified React + C# Console:**
 ```bash
-cd compliance-ui && npm install && npm run build && cd ..
-mkdir -p ComplianceApi/wwwroot && cp -r compliance-ui/dist/* ComplianceApi/wwwroot/
-dotnet run --project ComplianceApi --urls "http://localhost:5000"
+npm install && npm run build
+mkdir -p wwwroot && cp -r dist/* wwwroot/
+dotnet run --project kernal_compliance.csproj --urls "http://localhost:5000"
 ```
 
 **Run Automated Tests in One Terminal:**
 ```bash
-dotnet run --project ComplianceApi --urls "http://localhost:5000" &
+dotnet run --project kernal_compliance.csproj --urls "http://localhost:5000" &
 SERVER_PID=$!
-sleep 4 && dotnet test
+sleep 4 && dotnet test complianceApi.Tests.csproj
 kill $SERVER_PID
 ```
 
