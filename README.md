@@ -95,4 +95,5 @@ Test summary: total: 3, failed: 0, succeeded: 3, skipped: 0, duration: 3.4s
 | `WatchlistAndHighRiskCountry_BlocksOpsAnalystAndDraftsReportForMlro` | `Victor Boute`, `£3,000` → `MM` | `100/100` risk, `£70.00` fee (`1.5%` + `£25` surcharge), `403 Forbidden` block on `OPS_ANALYST`, UK NCA SAR draft generated on `SENIOR_MLRO` rejection |
 | `SplitTransfersOver24Hours_FlagsThirdTransferAtTenThousandLimit` | `3x £4,200` within 24 hours | Transfers 1–2 (`£4.2k`, `£8.4k`) auto-approved; Transfer 3 (`£12.6k` ≥ `£10k` UK MLR limit) flagged (`PENDING_REVIEW`) |
 
+Please seen the screenshot below
 <img width="1087" height="220" alt="image" src="https://github.com/user-attachments/assets/60abf1e5-7ed5-4d50-8d75-1260db48e6ce" />
