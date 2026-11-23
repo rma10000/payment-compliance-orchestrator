@@ -1,0 +1,6 @@
+<Solution>
+  <Folder Name="/ComplianceApi/">
+    <Project Path="ComplianceApi/kernal_compliance.csproj" />
+  </Folder>
+  <Project Path="complianceApi.Tests/complianceApi.Tests.csproj" />
+</Solution>

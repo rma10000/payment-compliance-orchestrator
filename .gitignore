@@ -1,0 +1,20 @@
+# .NET / C# Build Outputs
+bin/
+obj/
+*.user
+*.suo
+.vs/
+
+# Node / React Build Outputs
+node_modules/
+dist/
+.vite/
+
+# Environment & Secrets
+.env
+*.local
+appsettings.Development.json
+
+# OS / Editor Files
+.DS_Store
+Thumbs.db
